@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!---->
+<html>
+
+<head>
+  <title>Bay San! Se bay lavi</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <img src="/san.png" alt="vinn bay san" class="logo">
+    <h2>Chak ti gout san konte</h2>
+    <p>Yon sèl donè ka sove 3 moun ak san li bay la </p>
+    <p>Nou bezwen plis pase 12.000 donè pa jou</p>
+    <p> Se sèlman 1,8 % popilasyon ayisyèn nan ki bay san</p>
+
+    <button class="button1">M Vle Bay San</button>
+    <section class="form hide">
+      <h2>Fè pati lis moun kap bay san yo</h2>
+      <form action="/" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Non ak Siyati"
+      >
+
+      <input
+        type="text"
+        name="email"
+        placeholder="email"
+      >
+
+      <input
+        type="text"
+        name="blood"
+        placeholder="Group sangenw"
+      >
+      <button>M vle bay san</button>
+      </form>
+    </section>
+  </header>
+  <main>
+    <h2>Dènyè <span>Donè yo</span></h2>
+
+    <section class="donors">
+
+    {% for donor in donors %}
+      <div class="donor">
+        <div class="blood">{{donor.blood}}</div>
+        <p>{{donor.name}}</p>
+      </div>
+       {%endfor%}
+     
+    </section>
+  </main>
+   <footer> Made with 😍 by <a href="https://www.instagram.com/johnny_frantz1" target="blank">Johnny</a></footer>
+
+   <script src="/app.js"></script>
+</body>
+
+
+
+</html>
